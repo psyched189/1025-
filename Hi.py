@@ -1,5 +1,22 @@
-import numpy as np
+# okay lets write a class
 
-# a = [10,20,30,40,50,60]
-# name = 'Rohit'
-# print('Average marks of {} are {}'.format(name,(np.sum(a))/len(a)))
+class Employee():
+
+	def __init__(self,first,last,pay):
+		self.first = first
+		self.last  = last
+		self.salary = pay
+		self.instaID = first.lower() + '_' + last.lower()
+
+	def fullname(self):
+		return self.first + ' ' + self.last
+
+	def age(self,birthyear):
+		return 2019 - int(birthyear)
+
+emp1 = Employee('Yash','Shinge','$500k/yr')
+emp2 = Employee('Anushka','K','$50k/yr')
+
+print(emp1.instaID)
+print(emp2.fullname())
+print('Age of {} is {}'.format(emp1.first,emp1.age(1996)))
